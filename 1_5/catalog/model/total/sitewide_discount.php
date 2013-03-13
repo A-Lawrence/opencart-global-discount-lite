@@ -22,7 +22,7 @@ class ModelTotalSitewideDiscount extends Model {
 
                         // Calculate how much we have to take away from the total.
                         $remove = "0.00";
-                        $subTotal = $this->cart->getSubTotal();
+                        $subTotal = $total;
                         if($this->config->get("sitewide_discount_type") == "P"){
                             $perc = $this->config->get("sitewide_discount_amount")/100;
                             $remove = $subTotal-($subTotal*(1-$perc));

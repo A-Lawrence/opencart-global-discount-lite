@@ -28,12 +28,6 @@ Pass: demo
 NB: Databases are restored to default on a nightly basis.
 
 =======
-Help and Support
-=======
-
-
-
-=======
 Installation
 =======
 
@@ -44,6 +38,13 @@ Installation
 5) Click "Install" next to "Sitewide Discount".
 6) Complete the form as you want it!  Note: Status must be set to enabled!
 7) Done!
+
+=======
+Upgrading from V1.0 - 1.0.2
+=======
+
+Since only the core files are edited, and no files are deleted, follow steps 1 & 2 of the installation.
+If the global discount isn't enabled, follow steps 3 - 7
 
 =======
 FAQ
@@ -58,6 +59,10 @@ A) This is because the discount is applied in your local currency.  For example,
 =======
 Release Notes
 =======
+
+V1.0.2 - 04/12/2011 - [Opencart Version 1.4.9 - 1.5.1.3]
+--------------------------------------------------------
+- Fixed percentage based discount to use entire total, rather than just subtotal (1.4+)
 
 V1.0.1 - 04/12/2011 - [Opencart Version 1.4.9 - 1.5.1.3]
 --------------------------------------------------------
