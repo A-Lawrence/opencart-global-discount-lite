@@ -23,12 +23,12 @@ class ModelTotalSitewideDiscount extends Model {
 			$this->load->model('localisation/currency');
 
                         // Calculate how much we have to take away from products (incl taxes).
-                        foreach ($this->cart->getProducts() as $product) {
+                        /*foreach ($this->cart->getProducts() as $product) {
                             // If this product is taxable, remove that amount of tax!
                             if ($product['tax_class_id']) {
                                     $taxes[$product['tax_class_id']] -= ($product['total'] / 100 * $this->tax->getRate($product['tax_class_id'])) - (($product['total'] - $discount) / 100 * $this->tax->getRate($product['tax_class_id']));
                             }
-                        }
+                        }*/
 
                         // Calculate how much we have to take away from the total.
                         $remove = "0.00";

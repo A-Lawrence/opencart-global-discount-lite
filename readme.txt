@@ -28,6 +28,12 @@ Pass: demo
 NB: Databases are restored to default on a nightly basis.
 
 =======
+Help and Support
+=======
+
+
+
+=======
 Installation
 =======
 
@@ -53,6 +59,10 @@ A) This is because the discount is applied in your local currency.  For example,
 Release Notes
 =======
 
+V1.0.1 - 04/12/2011 - [Opencart Version 1.4.9 - 1.5.1.3]
+--------------------------------------------------------
+- Fixed tax error in version 1.4.9
+
 V1.0 - 27/11/2011 - [Opencart Version 1.4.9 - 1.5.1.3]
---------------------------------------------------
+------------------------------------------------------
 - Initial release.
