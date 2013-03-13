@@ -1,20 +1,20 @@
 <?php
 
 /**
- * Sitewide (Global) Discount extension for Opencart.
+ * Global Discount (lite) extension for Opencart.
  *
  * @author Anthony Lawrence <freelancer@anthonylawrence.me.uk>
- * @version 1.0
+ * @version 1.0.3
  * @copyright © Anthony Lawrence 2011
  * @license Creative Common's ShareAlike License - http://creativecommons.org/licenses/by-sa/3.0/
  */
 
 // Heading
-$_['heading_title']    = 'Sitewide Discount';
+$_['heading_title']    = 'Global Discount';
 
 // Text
 $_['text_total']       = 'Order totals';
-$_['text_success']     = 'Success: You have modified the sitewide discount!';
+$_['text_success']     = 'Success: You have modified the global discount!';
 
 // Entry
 $_['entry_total']      = 'Minimum Order Total:<span class="help">The minimum order value before discount is applied.</span>';
@@ -26,5 +26,5 @@ $_['entry_status']     = 'Status:';
 $_['entry_sort_order'] = 'Sort Order:';
 
 // Error
-$_['error_permission'] = 'Warning: You do not have permission to modify sitewide discounts!';
+$_['error_permission'] = 'Warning: You do not have permission to modify global discounts!';
 ?>

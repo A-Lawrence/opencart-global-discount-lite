@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Sitewide (Global) Discount extension for Opencart.
+ * Global Discount (lite) extension for Opencart.
  *
  * @author Anthony Lawrence <freelancer@anthonylawrence.me.uk>
  * @version 1.0
@@ -10,18 +10,18 @@
  */
 
 
-class ControllerTotalSitewideDiscount extends Controller {
+class ControllerTotalGlobalDiscount extends Controller {
 	private $error = array();
 
 	public function index() {
-		$this->load->language('total/sitewide_discount');
+		$this->load->language('total/global_discount');
 
 		$this->document->setTitle = $this->language->get('heading_title');
 
 		$this->load->model('setting/setting');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && ($this->validate())) {
-			$this->model_setting_setting->editSetting('sitewide_discount', $this->request->post);
+			$this->model_setting_setting->editSetting('global_discount', $this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -79,57 +79,57 @@ class ControllerTotalSitewideDiscount extends Controller {
       		'separator' => ' :: '
    		);
 
-		$this->data['action'] = HTTPS_SERVER . 'index.php?route=total/sitewide_discount&token=' . $this->session->data['token'];
+		$this->data['action'] = HTTPS_SERVER . 'index.php?route=total/global_discount&token=' . $this->session->data['token'];
 
 		$this->data['cancel'] = HTTPS_SERVER . 'index.php?route=extension/total&token=' . $this->session->data['token'];
 
-		if (isset($this->request->post['sitewide_discount_total'])) {
-			$this->data['sitewide_discount_total'] = $this->request->post['sitewide_discount_total'];
+		if (isset($this->request->post['global_discount_total'])) {
+			$this->data['global_discount_total'] = $this->request->post['global_discount_total'];
 		} else {
-			$this->data['sitewide_discount_total'] = $this->config->get('sitewide_discount_total');
+			$this->data['global_discount_total'] = $this->config->get('global_discount_total');
 		}
 
-		if (isset($this->request->post['sitewide_discount_amount'])) {
-			$this->data['sitewide_discount_amount'] = $this->request->post['sitewide_discount_amount'];
+		if (isset($this->request->post['global_discount_amount'])) {
+			$this->data['global_discount_amount'] = $this->request->post['global_discount_amount'];
 		} else {
-			$this->data['sitewide_discount_amount'] = $this->config->get('sitewide_discount_amount');
+			$this->data['global_discount_amount'] = $this->config->get('global_discount_amount');
 		}
 
-		if (isset($this->request->post['sitewide_discount_type'])) {
-			$this->data['sitewide_discount_type'] = $this->request->post['sitewide_discount_type'];
+		if (isset($this->request->post['global_discount_type'])) {
+			$this->data['global_discount_type'] = $this->request->post['global_discount_type'];
 		} else {
-			$this->data['sitewide_discount_type'] = $this->config->get('sitewide_discount_type');
+			$this->data['global_discount_type'] = $this->config->get('global_discount_type');
 		}
 
-		if (isset($this->request->post['sitewide_discount_date_start'])) {
-			$this->data['sitewide_discount_date_start'] = $this->request->post['sitewide_discount_date_start'];
+		if (isset($this->request->post['global_discount_date_start'])) {
+			$this->data['global_discount_date_start'] = $this->request->post['global_discount_date_start'];
 		} else {
-			$this->data['sitewide_discount_date_start'] = $this->config->get('sitewide_discount_date_start');
+			$this->data['global_discount_date_start'] = $this->config->get('global_discount_date_start');
 		}
 
-		if (isset($this->request->post['sitewide_discount_date_end'])) {
-			$this->data['sitewide_discount_date_end'] = $this->request->post['sitewide_discount_date_end'];
+		if (isset($this->request->post['global_discount_date_end'])) {
+			$this->data['global_discount_date_end'] = $this->request->post['global_discount_date_end'];
 		} else {
-			$this->data['sitewide_discount_date_end'] = $this->config->get('sitewide_discount_date_end');
+			$this->data['global_discount_date_end'] = $this->config->get('global_discount_date_end');
 		}
 
-		if (isset($this->request->post['sitewide_discount_status'])) {
-			$this->data['sitewide_discount_status'] = $this->request->post['sitewide_discount_status'];
+		if (isset($this->request->post['global_discount_status'])) {
+			$this->data['global_discount_status'] = $this->request->post['global_discount_status'];
 		} else {
-			$this->data['sitewide_discount_status'] = $this->config->get('sitewide_discount_status');
+			$this->data['global_discount_status'] = $this->config->get('global_discount_status');
 		}
 
-		if (isset($this->request->post['sitewide_discount_sort_order'])) {
-			$this->data['sitewide_discount_sort_order'] = $this->request->post['sitewide_discount_sort_order'];
+		if (isset($this->request->post['global_discount_sort_order'])) {
+			$this->data['global_discount_sort_order'] = $this->request->post['global_discount_sort_order'];
 		} else {
-			$this->data['sitewide_discount_sort_order'] = $this->config->get('sitewide_discount_sort_order');
+			$this->data['global_discount_sort_order'] = $this->config->get('global_discount_sort_order');
 		}
 
 		$this->load->model('localisation/tax_class');
 
 		$this->data['tax_classes'] = $this->model_localisation_tax_class->getTaxClasses();
 
-		$this->template = 'total/sitewide_discount.tpl';
+		$this->template = 'total/global_discount.tpl';
 		$this->children = array(
 			'common/header',
 			'common/footer'
@@ -139,7 +139,7 @@ class ControllerTotalSitewideDiscount extends Controller {
 	}
 
 	private function validate() {
-		if (!$this->user->hasPermission('modify', 'total/sitewide_discount')) {
+		if (!$this->user->hasPermission('modify', 'total/global_discount')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 

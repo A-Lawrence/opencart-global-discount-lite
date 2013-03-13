@@ -1,9 +1,8 @@
 <?php
 /**
- * Sitewide (Global) Discount extension for Opencart.
+ * Global Discount (lite) extension for Opencart.
  *
  * @author Anthony Lawrence <freelancer@anthonylawrence.me.uk>
- * @version 1.0
  * @copyright © Anthony Lawrence 2011
  * @license Creative Common's ShareAlike License - http://creativecommons.org/licenses/by-sa/3.0/
  */
@@ -25,33 +24,33 @@
             <table class="form">
                 <tr>
                     <td><?php echo $entry_total; ?></td>
-                    <td><input type="text" name="sitewide_discount_total" value="<?php echo $sitewide_discount_total; ?>" /></td>
+                    <td><input type="text" name="global_discount_total" value="<?php echo $global_discount_total; ?>" /></td>
                 </tr>
                 <tr>
                     <td><?php echo $entry_amount; ?></td>
-                    <td><input type="text" name="sitewide_discount_amount" value="<?php echo $sitewide_discount_amount; ?>" /></td>
+                    <td><input type="text" name="global_discount_amount" value="<?php echo $global_discount_amount; ?>" /></td>
                 </tr>
                 <tr>
                     <td><?php echo $entry_type; ?></td>
                     <td>
-                        <select name="sitewide_discount_type" id="sitewide_discount_type">
-                            <option value="F" <?= (($sitewide_discount_type == "F" ? "selected='selected'" : "")) ?>>Fixed Value</option>
-                            <option value="P" <?= (($sitewide_discount_type == "P" ? "selected='selected'" : "")) ?>>Percentage</option>
+                        <select name="global_discount_type" id="global_discount_type">
+                            <option value="F" <?= (($global_discount_type == "F" ? "selected='selected'" : "")) ?>>Fixed Value</option>
+                            <option value="P" <?= (($global_discount_type == "P" ? "selected='selected'" : "")) ?>>Percentage</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td><?php echo $entry_date_start; ?></td>
-                    <td><input type="text" name="sitewide_discount_date_start" id="date_start" value="<?php echo $sitewide_discount_date_start; ?>" /></td>
+                    <td><input type="text" name="global_discount_date_start" id="date_start" value="<?php echo $global_discount_date_start; ?>" /></td>
                 </tr>
                 <tr>
                     <td><?php echo $entry_date_end; ?></td>
-                    <td><input type="text" name="sitewide_discount_date_end" id="date_end" value="<?php echo $sitewide_discount_date_end; ?>" /></td>
+                    <td><input type="text" name="global_discount_date_end" id="date_end" value="<?php echo $global_discount_date_end; ?>" /></td>
                 </tr>
                 <tr>
                     <td><?php echo $entry_status; ?></td>
-                    <td><select name="sitewide_discount_status">
-                            <?php if ($sitewide_discount_status) { ?>
+                    <td><select name="global_discount_status">
+                            <?php if ($global_discount_status) { ?>
                                 <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
                                 <option value="0"><?php echo $text_disabled; ?></option>
                             <?php } else { ?>
@@ -62,7 +61,7 @@
                 </tr>
                 <tr>
                     <td><?php echo $entry_sort_order; ?></td>
-                    <td><input type="text" name="sitewide_discount_sort_order" value="<?php echo $sitewide_discount_sort_order; ?>" size="1" /></td>
+                    <td><input type="text" name="global_discount_sort_order" value="<?php echo $global_discount_sort_order; ?>" size="1" /></td>
                 </tr>
             </table>
         </form>
