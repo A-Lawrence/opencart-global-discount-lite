@@ -34,7 +34,7 @@ class ModelTotalSitewideDiscount extends Model {
 			$total_data[] = array(
                             'code'       => 'sitewide_discount',
                             'title'      => $this->language->get('text_sitewide_discount'),
-                            'text'       => $this->currency->format("-".$remove),
+                            'text'       => $this->currency->format(-$remove),
                             'value'      => -$remove,
                             'sort_order' => $this->config->get('sitewide_discount_sort_order')
 			);

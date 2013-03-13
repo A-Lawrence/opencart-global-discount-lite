@@ -35,14 +35,16 @@ Installation
 2) Upload the "admin" and "catalog" directories to the root of your OpenCart installation.
 3) Login to your admin panel.
 4) Go to "Extensions" > "Order Totals".
-5) Click "Install" next to "Sitewide Discount".
+5) Click "Install" next to "Global Discount".
 6) Complete the form as you want it!  Note: Status must be set to enabled!
 7) Done!
 
 =======
-Upgrading from V1.0 - 1.0.2
+Upgrade
 =======
 
+From v1.0 - v1.0.3
+------------------
 Since only the core files are edited, and no files are deleted, follow steps 1 & 2 of the installation.
 If the global discount isn't enabled, follow steps 3 - 7
 
@@ -60,13 +62,17 @@ A) This is because the discount is applied in your local currency.  For example,
 Release Notes
 =======
 
+V1.0.3 - 22/12/2011 - [Opencart Version 1.4.9 - 1.5.1.3]
+--------------------------------------------------------
+- Fixed issue with incorrect values being reported to the user when discount is applied in 1.5.x. [Thanks goes to vladko13 for reporting this and suggesting a fix]
+
 V1.0.2 - 04/12/2011 - [Opencart Version 1.4.9 - 1.5.1.3]
 --------------------------------------------------------
-- Fixed percentage based discount to use entire total, rather than just subtotal (1.4+)
+- Fixed percentage based discount to use entire total, rather than just subtotal. [Thanks goes to skip for reporting this]
 
 V1.0.1 - 04/12/2011 - [Opencart Version 1.4.9 - 1.5.1.3]
 --------------------------------------------------------
-- Fixed tax error in version 1.4.9
+- Fixed tax error in version 1.4.9.x. [Thanks goes to skip for reporting this]
 
 V1.0 - 27/11/2011 - [Opencart Version 1.4.9 - 1.5.1.3]
 ------------------------------------------------------
